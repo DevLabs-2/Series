@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h1>Que miramos hoy?</h1>
+
+@foreach (Serie serie in ViewBag.listSeries)
+{
+        <div class="card">
+            <h2 class="card-title"><b>@serie.Nombre</b></h2>
+            <img src="@serie.ImagenSerie" alt="img" style="width:100%">
+            <div class="container">
+                <div class="card-footer">
+                    <button data-toggle="model" data-target="#ModalSerieTemporadas" onclick="MostrarTemporadas(@serie.IdSerie)">Temporadas</button>
+                    <button>Actores</button>
+                    <button>Más Info</button>
+                </div>
+            </div>
+        </div>
+}
+<div id="ModalSerieTemporadas" tabindex="-1" aria-labelledby="exampleModelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Nombre Serie">Modal Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
