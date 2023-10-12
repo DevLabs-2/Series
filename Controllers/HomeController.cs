@@ -19,6 +19,16 @@ public class HomeController : Controller
         return View();
     }
 
+    public List<Temporada> VerTemporadas(int IdSerie){
+        return ViewBag.response = BD.GetTemporadas(IdSerie);
+    }
+     public List<Actor> VerActores(int IdSerie){
+        return ViewBag.response = BD.GetActores(IdSerie);
+    }
+    public Serie VerInfo(int IdSerie){
+        return ViewBag.response = BD.GetInfoSerie(IdSerie);
+    }
+
     public IActionResult Privacy()
     {
         return View();

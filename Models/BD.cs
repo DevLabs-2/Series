@@ -8,15 +8,17 @@ public static class BD
     public static List<Serie> GetSeries(){
          using (SqlConnection db = new SqlConnection(ConnectionString))
             {
-                string sql = "SELECT Nombre, ImagenSerie FROM Serie";
+                string sql = "SELECT * FROM Serie";
                 return db.Query<Serie>(sql).ToList();
             } 
     }
     public static Serie GetInfoSerie(int idSerie){
+        Serie serie = new Serie();
          using (SqlConnection db = new SqlConnection(ConnectionString))
             {
                 string sql = "SELECT * FROM Serie WHERE IdSerie = @IdSerie";
-                return db.QueryFirstOrDefault(sql, new {idSerie = idSerie});
+                serie = db.QueryFirstOrDefault(sql, new {idSerie = idSerie});
+                return serie;
             } 
     }
     public static List<Actor> GetActores(int IdSerie){
