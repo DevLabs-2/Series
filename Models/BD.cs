@@ -16,8 +16,8 @@ public static class BD
         Serie serie = new Serie();
          using (SqlConnection db = new SqlConnection(ConnectionString))
             {
-                string sql = "SELECT * FROM Serie WHERE IdSerie = @IdSerie";
-                serie = db.QueryFirstOrDefault(sql, new {idSerie = idSerie});
+                string sql = "SELECT * FROM Serie WHERE IdSerie = @idSerie";
+                serie = db.QueryFirstOrDefault<Serie>(sql, new {idSerie = idSerie});
                 return serie;
             } 
     }

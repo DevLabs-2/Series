@@ -53,7 +53,7 @@ function MostrarInfo(IdSerie, Nombre){
                 {
                     console.log(response);
                     $("#Titulo").html("Más información de la serie " + Nombre);
-                    $("#Cuerpo").html("Año de salida" + response.añoInicio + "<br>");
-                }
+                    $("#Cuerpo").html("Año de salida " + response.añoInicio + "<br>"+"Trama:" + "<br>" + response.sinopsis);
+                }   
         });
 }
