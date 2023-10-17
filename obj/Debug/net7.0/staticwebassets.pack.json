@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "Z:\\DevLabs 2 ORG\\Series\\wwwroot\\imgs\\logo.PNG",
+      "PackagePath": "staticwebassets\\imgs\\logo.PNG"
+    },
+    {
       "Id": "Z:\\DevLabs 2 ORG\\Series\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
